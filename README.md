@@ -1,4 +1,7 @@
-Down below is the original README.md file from junzis/contrail-seg.git. Only one important notebook is added here ('detect_notebook.ipynb').
+Down below is the original README.md file from [junzis/contrail-seg.git](https://github.com/junzis/contrail-seg.git). Few things are modified from the original repository:
+- a testing notebook 'detect_notebook.ipynb' is added. This notebook replaces the original 'detect.py' file.
+- a 'requirements.txt' file is added in order to install the dependencies in a different way
+- the original README.md file here is modified by adding a supplementary part *My way to install dependencies*
 
 # Neural network models for contrail detection and segmentation
 
@@ -40,7 +43,6 @@ mamba create -n contrail python=3.11 -c conda-forge
 ```
 
 ### Install dependencies
-
 
 For PyTorch users with CUDA 12.1 (recommended):
 
@@ -104,6 +106,18 @@ python train.py --dataset google:fewshot:400 --time 30 --loss dice
 
 ## Detection and visulization
 
-The `detect.py` provides examples for loading models and detecting contrails in the testing images. This file is from the original repository (junzis/contrail-seg.git). It is now recommanded to use the detect_notebook.ipynb file to detect contrail in the testing images. Two scores are computed in this file: the F1-score and the AUC-score.
+The `detect.py` provides examples for loading models and detecting contrails in the testing images.
 
 
+## My way to install dependencies
+
+Execute the command lines below to get the proper *resunet_env* virtual environment:
+
+```bash
+conda create -n resunet_env --file requirements.txt -c conda-forge
+conda activate resunet_env
+conda install pytorch cpuonly -c pytorch
+pip install segmentation-models-pytorch albumentations
+pip install pytorch-lightning
+conda install -n resunet_env ipykernel --update-deps --force-reinstall
+```
