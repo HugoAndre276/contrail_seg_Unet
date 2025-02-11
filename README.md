@@ -1,3 +1,5 @@
+Down below is the original README.md file from junzis/contrail-seg.git. Only one important notebook is added here ('detect_notebook.ipynb').
+
 # Neural network models for contrail detection and segmentation
 
 Introducing an open-source project that implements contrail segmentation neural network models in PyTorch. 
