@@ -102,6 +102,6 @@ python train.py --dataset google:fewshot:400 --time 30 --loss dice
 
 ## Detection and visulization
 
-The `detect.py` provides examples for loading models and detecting contrails in the testing images.
+The `detect.py` provides examples for loading models and detecting contrails in the testing images. This file is from the original repository (junzis/contrail-seg.git). It is now recommanded to use the detect_notebook.ipynb file to detect contrail in the testing images. Two scores are computed in this file: the F1-score and the AUC-score.
 
 
