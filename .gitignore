@@ -3,6 +3,7 @@ local
 local_*
 data/models
 data/landsat
+data/mtg
 lightning_logs
 google-goes-contrail
 
